@@ -1,5 +1,50 @@
 .App {
   text-align: center;
+  background-color: #607428;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content min-content auto;
+  grid-template-areas:
+    "header"
+    "nav"
+    "content";
+  min-height: 100vh;
+}
+.nav-bar-container {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 10px;
+  /* margin-top: 10px; */
+  /* margin-bottom: 100px; */
+  padding: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container {
+  background-color: #ffffff;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.categories-container {
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.categories {
+  display: grid;
 }
 
 .App-logo {
