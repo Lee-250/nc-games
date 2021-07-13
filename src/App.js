@@ -4,6 +4,8 @@ import Header from "./Components/Home/Header";
 import NavBar from "./Components/Home/NavBar";
 import FeaturedCategories from "./Components/Home/FeaturedCategories";
 import Reviews from "./Components/Reviews";
+import Categories from "./Components/Categories";
+import UserReview from "./Components/UserReview";
 import { useState } from "react";
 
 function App() {
@@ -12,12 +14,21 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Header reviews={reviews} setReviews={setReviews} />
+          <Header />
           <NavBar />
           <FeaturedCategories />
         </Route>
-        <Route exact path="/reviews">
-          <Reviews />
+        <Route exact path="/reviews/">
+          <Reviews reviews={reviews} setReviews={setReviews} />
+        </Route>
+        <Route exact path="/reviews/:category">
+          <Reviews reviews={reviews} setReviews={setReviews} />
+        </Route>
+        <Route exact path="/reviews/:review_id">
+          <UserReview />
+        </Route>
+        <Route>
+          <Categories exact path="/categories"></Categories>
         </Route>
       </Switch>
     </div>
