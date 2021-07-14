@@ -17,11 +17,11 @@ const Categories = () => {
     <div>
       <h2 className="header-container">Categories</h2>
       <NavBar />
-      <ul className="category-list">
+      <ul className="items-container">
         {categories.map((category, index) => {
           return (
             <li key={index}>
-              <Link to={`/reviews/${category.slug}`}>
+              <Link to={`/reviews/category/${category.slug}`}>
                 <h3>{category.slug}</h3>
               </Link>
             </li>

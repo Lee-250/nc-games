@@ -7,6 +7,8 @@ import Reviews from "./Components/Reviews";
 import Categories from "./Components/Categories";
 import UserReview from "./Components/UserReview";
 import { useState } from "react";
+import Expandable from "./Components/Expandable";
+import Comments from "./Components/Comments";
 
 function App() {
   const [reviews, setReviews] = useState([]);
@@ -21,14 +23,17 @@ function App() {
         <Route exact path="/reviews/">
           <Reviews reviews={reviews} setReviews={setReviews} />
         </Route>
-        <Route exact path="/reviews/:category">
+        <Route exact path="/reviews/category/:category">
           <Reviews reviews={reviews} setReviews={setReviews} />
         </Route>
         <Route exact path="/reviews/:review_id">
           <UserReview />
         </Route>
-        <Route>
-          <Categories exact path="/categories"></Categories>
+        <Route exact path="review/:review_id/comments">
+          <UserReview />
+        </Route>
+        <Route exact path="/categories">
+          <Categories />
         </Route>
       </Switch>
     </div>

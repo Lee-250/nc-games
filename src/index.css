@@ -15,6 +15,7 @@ code {
 li {
   display: flex;
   float: left;
+  margin: 0 0 3px 0;
 }
 
 button {
@@ -28,5 +29,5 @@ button:hover {
 }
 
 p {
-  color: aliceblue;
+  color: rgb(0, 0, 0);
 }

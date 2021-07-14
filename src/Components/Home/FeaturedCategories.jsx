@@ -2,9 +2,9 @@ import React from "react";
 
 const FeaturedCategories = () => {
   return (
-    <div className="items-container">
+    <div>
       <h1>Featured Categories</h1>
-      <ul className="categories">
+      <ul className="items-container">
         <li>Strategy</li>
         <li>Hidden-Roles</li>
         <li>Roll-and-Write</li>
