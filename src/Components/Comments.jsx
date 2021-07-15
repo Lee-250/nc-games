@@ -15,7 +15,7 @@ const Comments = () => {
     <div>
       {comments.map((comment) => {
         return (
-          <ul className="comments-container">
+          <ul key={comment.comment_id} className="comments-container">
             <li>{comment.created_by}</li>
             <li>{comment.body}</li>
           </ul>

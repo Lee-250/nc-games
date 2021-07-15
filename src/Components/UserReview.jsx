@@ -5,6 +5,7 @@ import NavBar from "./Home/NavBar";
 import Expandable from "./Expandable";
 import Comments from "./Comments";
 import Votes from "./Votes";
+import AddComment from "./AddComment";
 
 const UserReview = () => {
   const [review, setReview] = useState({});
@@ -40,6 +41,7 @@ const UserReview = () => {
       </section>
       <h2>Comments</h2>
       <Expandable>
+        <AddComment />
         <Comments />
       </Expandable>
     </div>
