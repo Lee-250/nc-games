@@ -4,16 +4,15 @@ import { getReviewById } from "./utils/api";
 import NavBar from "./Home/NavBar";
 import Expandable from "./Expandable";
 import Comments from "./Comments";
+import Votes from "./Votes";
 
 const UserReview = () => {
   const [review, setReview] = useState({});
   const { review_id } = useParams();
-  const [votes, setVotes] = useState(0);
 
   useEffect(() => {
     getReviewById(review_id).then((reviewFromApi) => {
       setReview(reviewFromApi);
-      setVotes(reviewFromApi.votes);
     });
   }, [review_id]);
   console.log(review);
@@ -37,7 +36,7 @@ const UserReview = () => {
       <section className="items-container">
         <h2>Review</h2>
         <p>{review.review_body}</p>
-        <h3>{votes}</h3>
+        <Votes />
       </section>
       <h2>Comments</h2>
       <Expandable>

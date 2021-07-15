@@ -31,5 +31,11 @@ export const getCategories = async () => {
   return data.categories;
 };
 
+export const patchVotesByReviewId = async (review_id, userVote) => {
+  const { data } = await reviewsApi.patch(`/reviews/${review_id}`, userVote);
+
+  return data.review;
+};
+
 // in app.js when routing to reviews with category query, what should path be.
 // would i have conditional logic in Reviews.jsx i.e. if category
