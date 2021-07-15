@@ -8,10 +8,12 @@ import Comments from "./Comments";
 const UserReview = () => {
   const [review, setReview] = useState({});
   const { review_id } = useParams();
+  const [votes, setVotes] = useState(0);
 
   useEffect(() => {
     getReviewById(review_id).then((reviewFromApi) => {
       setReview(reviewFromApi);
+      setVotes(reviewFromApi.votes);
     });
   }, [review_id]);
   console.log(review);
@@ -32,10 +34,11 @@ const UserReview = () => {
         <h3>By: {review.owner}</h3>
       </header>
       <NavBar />
-      <body className="items-container">
+      <section className="items-container">
         <h2>Review</h2>
         <p>{review.review_body}</p>
-      </body>
+        <h3>{votes}</h3>
+      </section>
       <h2>Comments</h2>
       <Expandable>
         <Comments />

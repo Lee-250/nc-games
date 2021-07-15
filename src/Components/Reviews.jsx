@@ -22,7 +22,12 @@ const Reviews = ({ reviews, setReviews }) => {
           return (
             <li key={review.review_id}>
               <Link to={`/reviews/${review.review_id}`}>
-                <img src={review.review_img_url} width="200" height="121" />
+                <img
+                  src={review.review_img_url}
+                  width="200"
+                  height="121"
+                  alt="user uploaded image"
+                />
                 <h3>Game: {review.title}</h3>
 
                 <p>User: {review.owner}</p>

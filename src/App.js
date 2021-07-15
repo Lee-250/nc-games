@@ -7,8 +7,6 @@ import Reviews from "./Components/Reviews";
 import Categories from "./Components/Categories";
 import UserReview from "./Components/UserReview";
 import { useState } from "react";
-import Expandable from "./Components/Expandable";
-import Comments from "./Components/Comments";
 
 function App() {
   const [reviews, setReviews] = useState([]);
