@@ -26,7 +26,7 @@ const Reviews = ({ reviews, setReviews }) => {
                   src={review.review_img_url}
                   width="200"
                   height="121"
-                  alt="user uploaded image"
+                  alt="uploaded by user"
                 />
                 <h3>Game: {review.title}</h3>
 
