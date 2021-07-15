@@ -15,6 +15,7 @@ const UserReview = () => {
     });
   }, [review_id]);
   console.log(review);
+
   const sectionStyle = {
     image: `url(${review.review_img_url})`,
   };
