@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import headerImage from "../../Images/dice.jpeg";
+import headerImage from "../../Images/game.jpeg";
 
 const Header = () => {
   const sectionStyle = {
@@ -11,12 +11,12 @@ const Header = () => {
       <header
         style={{
           backgroundImage: sectionStyle.image,
-          backgroundSize: "contain",
-          backgroundPosition: "35% 75%",
+          backgroundSize: "cover",
+          backgroundPosition: "75% 75%",
         }}
         className="header-container"
       >
-        <h1 style={{ color: "white" }}>NC Games Reviews</h1>
+        <h1 style={{ color: "black" }}>NC Games Reviews</h1>
         <Link to="/reviews">
           <button>Browse All Reviews</button>
         </Link>

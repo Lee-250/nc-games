@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FeaturedCategories = () => {
   return (
@@ -6,23 +7,34 @@ const FeaturedCategories = () => {
       <h1>Featured Categories</h1>
       <ul className="dice-container">
         <li>
-          <button className="dice-button">Strategy</button>
+          <Link className="dice-button" to={"/reviews/category/strategy"}>
+            Strategy
+          </Link>
+        </li>
+
+        <li></li>
+        <li>
+          <Link className="dice-button" to={"/reviews/category/hidden-roles"}>
+            Hidden-Roles
+          </Link>
         </li>
         <li></li>
         <li>
-          <button className="dice-button">Hidden-Roles</button>
+          <Link className="dice-button" to="/reviews/category/roll-and-write">
+            Roll-and-Write
+          </Link>
         </li>
         <li></li>
         <li>
-          <button className="dice-button">Roll-and-Write</button>
+          <Link className="dice-button" to="/reviews/category/dexterity">
+            Dexterity
+          </Link>
         </li>
         <li></li>
         <li>
-          <button className="dice-button">Dexterity</button>
-        </li>
-        <li></li>
-        <li>
-          <button className="dice-button">Push-your-Luck</button>
+          <Link className="dice-button" to="/reviews/category/">
+            Push-your-Luck
+          </Link>
         </li>
       </ul>
     </div>

@@ -3,6 +3,7 @@ import { getReviews } from "./utils/api";
 import { useParams } from "react-router-dom";
 import NavBar from "./Home/NavBar";
 import { Link } from "react-router-dom";
+import headerImage from "../Images/dice.jpeg";
 
 const Reviews = ({ reviews, setReviews }) => {
   const { category } = useParams();
@@ -13,9 +14,22 @@ const Reviews = ({ reviews, setReviews }) => {
     });
   }, [category]);
 
+  const sectionStyle = {
+    image: `url(${headerImage})`,
+  };
+
   return (
     <div>
-      <h2 className="header-container">Games Reviews</h2>
+      <h2
+        style={{
+          backgroundImage: sectionStyle.image,
+          backgroundSize: "cover",
+          backgroundPosition: "75% 75%",
+        }}
+        className="header-container"
+      >
+        Games Reviews
+      </h2>
       <NavBar />
       <ul className="items-container">
         {reviews.map((review) => {
