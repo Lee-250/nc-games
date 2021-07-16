@@ -88,6 +88,20 @@
   margin-left: 20px;
 }
 
+.categories-container {
+  display: grid;
+
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

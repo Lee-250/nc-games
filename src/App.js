@@ -1,8 +1,6 @@
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
-import Header from "./Components/Home/Header";
-import NavBar from "./Components/Home/NavBar";
-import FeaturedCategories from "./Components/Home/FeaturedCategories";
+import Home from "./Components/Home/Home";
 import Reviews from "./Components/Reviews";
 import Categories from "./Components/Categories";
 import UserReview from "./Components/UserReview";
@@ -14,9 +12,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/">
-          <Header />
-          <NavBar />
-          <FeaturedCategories />
+          <Home />
         </Route>
         <Route exact path="/reviews/">
           <Reviews reviews={reviews} setReviews={setReviews} />
