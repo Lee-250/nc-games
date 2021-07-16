@@ -15,16 +15,19 @@ const AddComment = () => {
     postCommentByReviewId(review_id, newComment).then((newComment) => {
       console.log(newComment);
     });
+    // setComments(newComment);
   };
   return (
     <div>
       <form onSubmit={handleSumbit}>
         <label>
           Add a comment:
-          <textarea
-            value={newCommentBody}
-            onChange={(event) => setNewCommentBody(event.target.value)}
-          ></textarea>
+          <label>
+            <textarea
+              value={newCommentBody}
+              onChange={(event) => setNewCommentBody(event.target.value)}
+            ></textarea>
+          </label>
           <button>Post</button>
         </label>
       </form>

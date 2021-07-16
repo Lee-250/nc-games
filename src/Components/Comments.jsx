@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getCommentsByReviewId } from "./utils/api";
 import { useParams } from "react-router-dom";
+import AddComment from "./AddComment";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
@@ -10,14 +11,17 @@ const Comments = () => {
     getCommentsByReviewId(review_id).then((commentsFromApi) => {
       setComments(commentsFromApi);
     });
-  }, [review_id]);
+  }, [review_id, comments]);
   return (
     <div>
+      <AddComment />
+
       {comments.map((comment) => {
         return (
           <ul key={comment.comment_id} className="comments-container">
-            <li>{comment.created_by}</li>
+            <li> User: {comment.created_by}</li>
             <li>{comment.body}</li>
+            <li>{comment.created_at}</li>
           </ul>
         );
       })}
