@@ -20,7 +20,7 @@ const Reviews = ({ reviews, setReviews }) => {
 
   return (
     <div>
-      <h2
+      <header
         style={{
           backgroundImage: sectionStyle.image,
           backgroundSize: "cover",
@@ -28,8 +28,9 @@ const Reviews = ({ reviews, setReviews }) => {
         }}
         className="header-container"
       >
-        Games Reviews
-      </h2>
+        <h2 style={{ color: "white" }}>Games Reviews</h2>
+      </header>
+
       <NavBar />
       <ul className="items-container">
         {reviews.map((review) => {

@@ -175,6 +175,9 @@
     margin: 25px;
     border-radius: 60%;
   }
+  a:hover {
+    background-color: blue;
+  }
 }
 
 .App-header {
