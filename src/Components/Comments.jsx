@@ -16,15 +16,17 @@ const Comments = () => {
     <div>
       <AddComment />
 
-      {comments.map((comment) => {
-        return (
-          <ul key={comment.comment_id} className="comments-container">
-            <li> User: {comment.created_by}</li>
-            <li>{comment.body}</li>
-            <li>{comment.created_at}</li>
-          </ul>
-        );
-      })}
+      {comments
+        .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
+        .map((comment) => {
+          return (
+            <ul key={comment.comment_id} className="comments-container">
+              <li> User: {comment.created_by}</li>
+              <li>{comment.body}</li>
+              <li>{comment.created_at}</li>
+            </ul>
+          );
+        })}
     </div>
   );
 };

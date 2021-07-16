@@ -14,8 +14,9 @@ const AddComment = () => {
     };
     postCommentByReviewId(review_id, newComment).then((newComment) => {
       console.log(newComment);
+      return newComment.newComment;
     });
-    // setComments(newComment);
+    setNewCommentBody("");
   };
   return (
     <div>
@@ -28,7 +29,7 @@ const AddComment = () => {
               onChange={(event) => setNewCommentBody(event.target.value)}
             ></textarea>
           </label>
-          <button>Post</button>
+          <button disabled={!newCommentBody}>Post</button>
         </label>
       </form>
     </div>

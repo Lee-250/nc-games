@@ -51,13 +51,13 @@
 .categories {
   display: grid;
 }
-.reviews-list {
+/* .reviews-list {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-}
+} */
 .category-list {
   display: grid;
   width: 100%;
