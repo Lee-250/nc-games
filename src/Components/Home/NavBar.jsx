@@ -17,6 +17,9 @@ const NavBar = () => {
             <li>Categories</li>
           </Link>
           <li>Post</li>
+          <Link to="/login">
+            <li>Log in</li>
+          </Link>
         </ul>
       </nav>
     </div>

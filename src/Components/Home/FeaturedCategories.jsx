@@ -32,7 +32,7 @@ const FeaturedCategories = () => {
         </li>
         <li></li>
         <li>
-          <Link className="dice-button" to="/reviews/category/">
+          <Link className="dice-button" to="/reviews/category/push-your-luck">
             Push-your-Luck
           </Link>
         </li>

@@ -4,10 +4,12 @@ import Home from "./Components/Home/Home";
 import Reviews from "./Components/Reviews";
 import Categories from "./Components/Categories";
 import UserReview from "./Components/UserReview";
+import User from "./Components/User";
 import { useState } from "react";
 
 function App() {
   const [reviews, setReviews] = useState([]);
+  const [user, setUser] = useState({});
   // const [isLoading, setIsLoading] = useState(true);
   return (
     <div className="App">
@@ -29,6 +31,9 @@ function App() {
         </Route>
         <Route exact path="/categories">
           <Categories />
+        </Route>
+        <Route exact path="/login">
+          <User user={user} setUser={setUser} />
         </Route>
       </Switch>
     </div>

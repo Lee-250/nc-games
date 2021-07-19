@@ -5,16 +5,22 @@ import AddComment from "./AddComment";
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
+  const [hasAddedComment, setHasAddedComment] = useState(false);
   const { review_id } = useParams();
 
   useEffect(() => {
     getCommentsByReviewId(review_id).then((commentsFromApi) => {
       setComments(commentsFromApi);
     });
-  }, [review_id, comments]);
+  }, [review_id, hasAddedComment]);
+
+  console.log("hello");
   return (
     <div>
-      <AddComment />
+      <AddComment
+        setHasAddedComment={setHasAddedComment}
+        setComments={setComments}
+      />
 
       {comments
         .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))

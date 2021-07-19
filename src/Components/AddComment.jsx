@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { postCommentByReviewId } from "./utils/api";
 
-const AddComment = () => {
+const AddComment = ({ setHasAddedComment, setComments }) => {
   const [newCommentBody, setNewCommentBody] = useState("");
   const { review_id } = useParams();
 
@@ -12,9 +12,16 @@ const AddComment = () => {
       username: "grumpy19",
       body: newCommentBody,
     };
+
+    // setComments((currComments) => {
+    //   const newComments = [...currComments];
+    //   newComments.push(newComment);
+    //   return newComments;
+    // });
+
     postCommentByReviewId(review_id, newComment).then((newComment) => {
       console.log(newComment);
-      return newComment.newComment;
+      setHasAddedComment(true);
     });
     setNewCommentBody("");
   };
