@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+/* 607428 */
 .App {
   text-align: center;
-  background-color: #607428;
+  font-family: pangolin;
+  background-color: #77dd77;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: min-content min-content auto;
@@ -119,7 +122,7 @@
 @media only screen and (min-width: 600px) {
   .App {
     text-align: center;
-    background-color: #607428;
+    background-color: #77dd77;
     display: grid;
     width: 100%;
     grid-template-columns: 100%;
@@ -175,8 +178,8 @@
     margin: 25px;
     border-radius: 60%;
   }
-  a:hover {
-    background-color: blue;
+  .dice-button:hover {
+    background-color: #607428;
   }
 }
 

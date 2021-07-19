@@ -8,6 +8,7 @@ import { useState } from "react";
 
 function App() {
   const [reviews, setReviews] = useState([]);
+  // const [isLoading, setIsLoading] = useState(true);
   return (
     <div className="App">
       <Switch>
